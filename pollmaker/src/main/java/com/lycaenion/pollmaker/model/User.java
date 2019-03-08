@@ -1,5 +1,6 @@
 package com.lycaenion.pollmaker.model;
 
+import com.lycaenion.pollmaker.model.audit.DateAudit;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
@@ -18,7 +19,7 @@ import java.util.Set;
                 "email"
         })
 })
-public class User {
+public class User extends DateAudit {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
